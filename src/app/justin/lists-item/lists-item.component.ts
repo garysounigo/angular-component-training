@@ -11,6 +11,9 @@ export class ListsItemComponent {
   @Input() subtitle: string = '';
   @Input() count: number = 0;
   @Input() imgSrc: string = '';
+  @Input() imgAlt: string = '';
+  @Input() imgSrcRight: string = '';
+  @Input() imgAltRight: string = '';
   // @Input() shadow: string = '0px 4px 8px #000000';
   // @Input() hoverShadow: string = '0px 8px 16px #000000';
   hover: boolean = false;
@@ -18,9 +21,10 @@ export class ListsItemComponent {
   @Input() size: number = 18;
   @Input() color: string = 'black';
   @Input() backgroundColor: string = '#f3f3f3';
-  @Output() itemClick = new EventEmitter<void>();
+  @Output() itemClick = new EventEmitter<MouseEvent>();
 
-  onClick() {
-    this.itemClick.emit();
+  onClick(event: MouseEvent) {
+    this.click = !this.click;
+    this.itemClick.emit(event);
   }
 }

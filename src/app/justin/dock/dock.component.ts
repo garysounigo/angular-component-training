@@ -29,7 +29,7 @@ export class DockComponent {
         title: 'Tableu intelligent',
         lists: {
           title: 'hello',
-          drop: false,
+          drop: true,
           listsItems: [
             {
               size: '16',
@@ -49,7 +49,7 @@ export class DockComponent {
         title: 'Flux collaboratif',
         lists: {
           title: 'hello',
-          drop: false,
+          drop: true,
           listsItems: [
             {
               size: '16',
@@ -127,7 +127,12 @@ export class DockComponent {
     ]
   };
 
-  triggeredDrop(index: number){
+  clickPos: {x:number;y:number} = {x: 0, y:0};
+
+    //attention quand on clique a l'interieur du padding on recoit un offsetX,Y qui vient de l'elmentent parent a gerer pour le clickPos pour quil ny ai pas de decalage  
+  triggeredDrop(event: MouseEvent, index: number){
+    this.clickPos = {x: event.offsetX, y: event.offsetY};
+    console.log('clickPos in dock',this.clickPos)
     this.lists.listsItems[index].lists.drop && this.lists.listsItems.forEach(
       (m:any) => {
         m.lists?.drop && (m.triggered = false)
@@ -137,18 +142,4 @@ export class DockComponent {
   }
 
 
-
-//   malists: any[] = [
-//     {title: 'Dashboard'},
-//     {title: 'Inbox'},
-//     {title: 'Calendar'},
-//     {title: 'Settings'},
-//     {title: 'Vaadin website'}
-//   ];
-// }
-
 }
-
-// le 1 : rendre en objet
-// le 2 : rajouter un menu déroulant
-// le 3 : faire en sorte que quand j'active le menu deroulant, si il ya menu deroulant se ferme

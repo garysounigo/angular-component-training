@@ -5,14 +5,14 @@
     [style.color]="hover ? backgroundColor : color"
     (mouseenter)="hover = true"
     (mouseleave)="hover = false"
-    (click)="click = !click"
-    (click)="onClick()"
+    (click)="onClick($event)"
 >
 
 
 
-    @if (imgSrc) { <img class="lists-img" [src]="imgSrc" alt="X">
-}
+    @if (imgSrc) { 
+        <img class="lists-img" [src]="imgSrc" [alt]="imgAlt">
+    }
     <div class="title">
         @if (title) {
             <h1>{{ title | titlecase }}</h1>
@@ -34,6 +34,9 @@
     } @else {
         <div>
             <ng-content select="p[count]"></ng-content></div>
+    }
+    @if (imgSrcRight) { 
+        <img class="lists-img" [src]="imgSrcRight" [alt]="imgAltRight">
     }
 </div>
 

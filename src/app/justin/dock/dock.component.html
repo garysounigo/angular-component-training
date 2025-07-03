@@ -4,7 +4,7 @@
     <lists [title]="lists.title || undefined" [drop]="lists.drop || undefined">
         @for (item of lists.listsItems; track item; let i = $index) {
             <lists-item 
-                (itemClick)="triggeredDrop(i)"
+                (itemClick)="triggeredDrop($event,i)"
                 [click]="item.triggered"
                 [size]="item.size || undefined"
             >
@@ -15,7 +15,11 @@
                     <p subtitle>{{item.subtitle}}</p>
                 }
                 @if (item.lists) {
-                    <lists [title]="item.lists.title || undefined" [drop]="item.lists.drop || undefined">
+                    <lists 
+                        [title]="item.lists.title || undefined"
+                        [drop]="item.lists.drop || undefined"
+                        [clickPos]="clickPos"
+                    >
                         @for (item2 of item.lists.listsItems; track item2) {
                             <lists-item [size]="item2.size || undefined">
                                 @if (item2.title) {
