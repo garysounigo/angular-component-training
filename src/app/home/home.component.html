@@ -1,0 +1,26 @@
+<span> Select a fruit</span>
+<div class="chip-container">
+  <span *ngFor="let chip of selectedChips; let i = index" class="chip">
+    {{ chip }}
+    <button (click)="removeChip(i)">x</button>
+  </span>
+  <input
+    type="text"
+    [(ngModel)]="inputValue"
+    [attr.placeholder]="selectedChips.length ? '' : 'Type to add...'"
+    (keydown.enter)="addChipsOnEnter()"
+    (keydown.tab)="addChipsOnTab($event)"
+    (keydown.backspace)="deleteChipsOnBackspace()"
+  />
+</div>
+<div class="suggestions" *ngIf="inputValue && filteredOptions().length">
+  <div class="item" *ngFor="let option of filteredOptions()" (click)="addChip(option)">
+    {{ option }}
+  </div>
+</div>
+
+
+<div class="link">
+  <a routerLink="/justin">Justin</a>
+  <a routerLink="/julien">Julien</a>
+</div>

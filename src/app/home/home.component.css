@@ -1,0 +1,79 @@
+:host{
+  display: block;
+  box-sizing: border-box;
+}
+
+.chip-container {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid #ccc;
+  padding: 4px 8px;
+}
+
+.chip {
+  background: #e0e0e0;
+  border-radius: 16px;
+  padding: 4px 8px;
+  margin: 4px;
+  display: flex;
+  align-items: center;
+}
+
+.chip button {
+  background: transparent;
+  border: none;
+  margin-left: 4px;
+  cursor: pointer;
+}
+
+input {
+  flex: 1;
+  min-width: 120px;
+  border: none;
+  outline: none;
+  padding-left: 6px;
+  margin: 8px 0px;
+}
+
+.suggestions {
+  border: 1px solid #ccc;
+  background: white;
+}
+
+.item {
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.item:hover{
+  background-color: #eeeeee ;
+}
+
+
+.link{
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 120px;
+    width: 25%;
+    height: 50vh;
+}
+
+a:-webkit-any-link {
+    color: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+a {
+  font-size: 48px;
+  font-family: "Poppins";
+  color: #235AE5;
+  border-left: 4px solid #235AE5;
+  padding-left: 30px;
+}
+a:nth-child(2){
+  color: #1941a7;
+  border-left: 4px solid #1941a7;
+}

@@ -1,0 +1,340 @@
+@charset "UTF-8";
+
+h1, h2, h3, h4, h5, h6, p {
+        font-size: inherit;
+
+        margin-block-start: 0;
+        margin-block-end: 0;
+}
+
+button {
+        display: inline-block;
+        cursor: pointer;
+        appearance: unset;
+        text-rendering: unset;
+        color: unset;
+        letter-spacing: unset;
+        word-spacing: unset;
+        line-height: unset;
+        text-transform: unset;
+        text-indent: unset;
+        text-shadow: unset;
+        text-align: unset;
+        box-sizing: unset;
+        background-color: unset;
+        margin: unset;
+        padding-block: unset;
+        padding-inline: unset;
+        border-width: unset;
+        border-style: unset;
+        border-color: unset;
+        border-image: unset;
+        
+}
+
+/*** definition de police **/
+
+
+
+
+@font-face{
+        font-family: Poppins;
+        src: url("/Poppins/Poppins-Thin.ttf") format("TrueType");
+        font-weight:100;
+        font-style:normal;
+        font-display:swap
+}
+
+@font-face{
+        font-family: Poppins;
+        src: url("/Poppins/Poppins-ExtraLight.ttf") format("TrueType");
+        font-weight:200;
+        font-style:normal;
+        font-display:swap
+}
+
+@font-face{
+        font-family: Poppins;
+        src: url("/Poppins/Poppins-Light.ttf") format("TrueType");
+        font-weight:300;
+        font-style:normal;
+        font-display:swap
+}
+
+@font-face{
+        font-family: Poppins;
+        src: url("/Poppins/Poppins-Regular.ttf") format("TrueType");
+        font-weight:400;
+        font-style:normal;
+        font-display:swap
+}
+
+@font-face{
+        font-family: Poppins;
+        src: url("/Poppins/Poppins-Medium.ttf") format("TrueType");
+        font-weight:500;
+        font-style:normal;
+        font-display:swap
+}
+
+@font-face{
+        font-family: Poppins;
+        src: url("/Poppins/Poppins-SemiBold.ttf") format("TrueType");
+        font-weight:600;
+        font-style:normal;
+        font-display:swap
+}
+
+
+@font-face{
+        font-family: Poppins;
+        src: url("/Poppins/Poppins-Bold.ttf") format("TrueType");
+        font-weight:700;
+        font-style:normal;
+        font-display:swap
+}
+
+
+@font-face{
+        font-family: Poppins;
+        src: url("/Poppins/Poppins-ExtraBold.ttf") format("TrueType");
+        font-weight:800;
+        font-style:normal;
+        font-display:swap
+}
+
+
+@font-face{
+        font-family: Poppins;
+        src: url("/Poppins/Poppins-Black.ttf") format("TrueType");
+        font-weight:900;
+        font-style:normal;
+        font-display:swap
+}
+
+@font-face{
+        font-family: Poppins;
+        src: url("/Poppins/Poppins-ThinItalic.ttf") format("TrueType");
+        font-weight:100;
+        font-style:italic;
+        font-display:swap
+}
+
+@font-face{
+        font-family: Poppins;
+        src: url("/Poppins/Poppins-ExtraLightItalic.ttf") format("TrueType");
+        font-weight:200;
+        font-style:italic;
+        font-display:swap
+}
+
+@font-face{
+        font-family: Poppins;
+        src: url("/Poppins/Poppins-LightItalic.ttf") format("TrueType");
+        font-weight:300;
+        font-style:italic;
+        font-display:swap
+}
+
+@font-face{
+        font-family: Poppins;
+        src: url("/Poppins/Poppins-Italic.ttf") format("TrueType");
+        font-weight:400;
+        font-style:italic;
+        font-display:swap
+}
+
+@font-face{
+        font-family: Poppins;
+        src: url("/Poppins/Poppins-MediumItalic.ttf") format("TrueType");
+        font-weight:500;
+        font-style:italic;
+        font-display:swap
+}
+
+@font-face{
+        font-family: Poppins;
+        src: url("/Poppins/Poppins-SemiBoldItalic.ttf") format("TrueType");
+        font-weight:600;
+        font-style:italic;
+        font-display:swap
+}
+
+
+@font-face{
+        font-family: Poppins;
+        src: url("/Poppins/Poppins-BoldItalic.ttf") format("TrueType");
+        font-weight:700;
+        font-style:italic;
+        font-display:swap
+}
+
+
+@font-face{
+        font-family: Poppins;
+        src: url("/Poppins/Poppins-ExtraBoldItalic.ttf") format("TrueType");
+        font-weight:800;
+        font-style:italic;
+        font-display:swap
+}
+
+
+@font-face{
+        font-family: Poppins;
+        src: url("/Poppins/Poppins-BlackItalic.ttf") format("TrueType");
+        font-weight:900;
+        font-style:italic;
+        font-display:swap
+}
+
+/* Inter Font */
+
+@font-face{
+        font-family: Inter;
+        src: url("/Inter/Inter_28pt-Thin.ttf") format("TrueType");
+        font-weight:100;
+        font-style:normal;
+        font-display:swap
+}
+
+@font-face{
+        font-family: Inter;
+        src: url("/Inter/Inter_28pt-ExtraLight.ttf") format("TrueType");
+        font-weight:200;
+        font-style:normal;
+        font-display:swap
+}
+
+@font-face{
+        font-family: Inter;
+        src: url("/Inter/Inter_28pt-Light.ttf") format("TrueType");
+        font-weight:300;
+        font-style:normal;
+        font-display:swap
+}
+
+@font-face{
+        font-family: Inter;
+        src: url("/Inter/Inter_28pt-Regular.ttf") format("TrueType");
+        font-weight:400;
+        font-style:normal;
+        font-display:swap
+}
+
+@font-face{
+        font-family: Inter;
+        src: url("/Inter/Inter_28pt-Medium.ttf") format("TrueType");
+        font-weight:500;
+        font-style:normal;
+        font-display:swap
+}
+
+@font-face{
+        font-family: Inter;
+        src: url("/Inter/Inter_28pt-SemiBold.ttf") format("TrueType");
+        font-weight:600;
+        font-style:normal;
+        font-display:swap
+}
+
+
+@font-face{
+        font-family: Inter;
+        src: url("/Inter/Inter_28pt-Bold.ttf") format("TrueType");
+        font-weight:700;
+        font-style:normal;
+        font-display:swap
+}
+
+
+@font-face{
+        font-family: Inter;
+        src: url("/Inter/Inter_28pt-ExtraBold.ttf") format("TrueType");
+        font-weight:800;
+        font-style:normal;
+        font-display:swap
+}
+
+
+@font-face{
+        font-family: Inter;
+        src: url("/Inter/Inter_28pt-Black.ttf") format("TrueType");
+        font-weight:900;
+        font-style:normal;
+        font-display:swap
+}
+
+@font-face{
+        font-family: Inter;
+        src: url("/Inter/Inter_28pt-ThinItalic.ttf") format("TrueType");
+        font-weight:100;
+        font-style:italic;
+        font-display:swap
+}
+
+@font-face{
+        font-family: Inter;
+        src: url("/Inter/Inter_28pt-ExtraLightItalic.ttf") format("TrueType");
+        font-weight:200;
+        font-style:italic;
+        font-display:swap
+}
+
+@font-face{
+        font-family: Inter;
+        src: url("/Inter/Inter_28pt-LightItalic.ttf") format("TrueType");
+        font-weight:300;
+        font-style:italic;
+        font-display:swap
+}
+
+@font-face{
+        font-family: Inter;
+        src: url("/Inter/Inter_28pt-Italic.ttf") format("TrueType");
+        font-weight:400;
+        font-style:italic;
+        font-display:swap
+}
+
+@font-face{
+        font-family: Inter;
+        src: url("/Inter/Inter_28pt-MediumItalic.ttf") format("TrueType");
+        font-weight:500;
+        font-style:italic;
+        font-display:swap
+}
+
+@font-face{
+        font-family: Inter;
+        src: url("/Inter/Inter_28pt-SemiBoldItalic.ttf") format("TrueType");
+        font-weight:600;
+        font-style:italic;
+        font-display:swap
+}
+
+
+@font-face{
+        font-family: Inter;
+        src: url("/Inter/Inter_28pt-BoldItalic.ttf") format("TrueType");
+        font-weight:700;
+        font-style:italic;
+        font-display:swap
+}
+
+
+@font-face{
+        font-family: Inter;
+        src: url("/Inter/Inter_28pt-ExtraBoldItalic.ttf") format("TrueType");
+        font-weight:800;
+        font-style:italic;
+        font-display:swap
+}
+
+
+@font-face{
+        font-family: Inter;
+        src: url("/Inter/Inter_28pt-BlackItalic.ttf") format("TrueType");
+        font-weight:900;
+        font-style:italic;
+        font-display:swap
+}
