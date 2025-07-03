@@ -1,4 +1,4 @@
-import { Component, Input, HostBinding, OnChanges } from '@angular/core';
+import { Component, Input, HostBinding, } from '@angular/core';
 
 
 
@@ -8,7 +8,7 @@ import { Component, Input, HostBinding, OnChanges } from '@angular/core';
   templateUrl: './lists.component.html',
   styleUrl: './lists.component.css'
 })
-export class ListsComponent implements OnChanges {
+export class ListsComponent {
   // @HostBinding('class.drop') @Input() drop: boolean = false;
   @Input() drop: boolean = false;
   //@Input() direction: string = 'vertical';
@@ -38,15 +38,5 @@ export class ListsComponent implements OnChanges {
               )
             );
 
-  }
-
-  ngOnInit(){
-    console.log('changes',this.clickPos, this.strategy === 'click' && `${this.clickPos.x}px`)
-    console.log('ini',this.drop)
-  }
-
-  ngOnChanges(){
-    console.log('changes',this.drop)
-    console.log('changes',this.clickPos, this.strategy === 'click' && `${this.clickPos.x}px`)
   }
 }
