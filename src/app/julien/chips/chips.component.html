@@ -1,0 +1,24 @@
+<div 
+    class="assist-chip"
+    [style.paddingRight.px]="iconrt ? padding - 6 : padding" 
+    [style.paddingLeft.px]="icon ? padding - 6 : padding" 
+    [style.color]="hover ? bckColor : color" 
+    [style.backgroundColor]="hover ? color : bckColor"
+    [style.borderColor]="hover ? bckColor: color"
+    [style.borderRadius]="radius + 'px'"
+    (mouseenter)="hover = true"
+    (mouseleave)="hover = false"
+>
+    
+    @if (icon) {
+        <span class="material-symbols-outlined">{{ icon }}</span>
+    }
+    @if (label)  {
+        <span class="label">{{ label }}</span> 
+    } @else {
+        <ng-content select="span[label]"></ng-content>
+    }
+    @if (iconrt) {
+        <span class="material-symbols-outlined">{{ iconrt }}</span>
+    }
+</div>

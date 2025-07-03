@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined');
+
+.assist-chip {
+  display: inline-flex;
+  background-color: #f3f3f3;
+  border-radius: 16px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  color: black;
+  border: 1px solid black;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  padding: 6px 13px 8px 15px;
+  align-items: baseline;
+  justify-content: center;
+  /* --hover-bckColor: black; */
+  /* --hover-color: #f3f3f3; */
+
+}
+
+.assist-chip:hover {
+  /* background-color:var(--hover-bckColor);*/
+  /*color: var(--hover-color);*/
+  background-color: black;
+  color: #f3f3f3;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+  font-size: 15px;
+  padding: 2px 4px;
+  vertical-align: middle;
+  align-items: center;
+  line-height: 1;
+  transform: translateY(2px);
+
+}
+
+.label {
+  vertical-align: middle;
+  align-items: center;
+}

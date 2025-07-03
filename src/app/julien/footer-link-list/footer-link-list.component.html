@@ -1,0 +1,14 @@
+<h2>{{linkList.heading | titlecase}}</h2>
+
+@for (link of stateLinks; track link){
+    <a 
+        [href]="link.href"
+        (mouseenter)="link.hover = true"
+        (mouseleave)="link.hover = false"
+        [style.fontSize.px]="link.hover ? 18 : 16"
+    >
+        {{ link.label | titlecase }}
+    </a>
+}
+
+<!-- [style.scale]="link.hover ? 1.5 : 1" -->

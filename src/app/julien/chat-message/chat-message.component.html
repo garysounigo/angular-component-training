@@ -1,0 +1,26 @@
+@if (mode === 'conversation' && type === 'message') {
+    <div class="chat-message" [style.justifyContent]="send === 'true' ?'flex-end':'flex-start'">
+        <div class="chat-message-content type-message"  [ngClass]="{'send': send === 'true', 'receive': !(send === 'true')}">
+            {{content}}
+        </div>
+    </div>
+} @else if (mode === 'chatbot' && role === 'user') {
+
+
+
+    @if (type === 'message') {
+        <div class="chat-message" [style.justifyContent]="send === 'true' ?'flex-end':'flex-start'">
+        <div class="chat-message-content type-message"  [ngClass]="{'send': send === 'true', 'receive': !(send === 'true')}">
+            {{content}}
+        </div>
+    </div>
+    } 
+} @else if (mode === 'chatbot' && role === 'assistant') {
+    @if (type === 'block') {
+        <div class="chat-message">
+        <div class="chat-message-content type-block" [ngClass]="{'block': true}">
+            {{content}}
+        </div>
+    </div>
+    }
+} 
