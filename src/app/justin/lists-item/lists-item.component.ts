@@ -21,7 +21,7 @@ export class ListsItemComponent {
   @Input() size: number = 18;
   @Input() color: string = 'black';
   @Input() backgroundColor: string = '#f3f3f3';
-  @Output() itemClick = new EventEmitter<MouseEvent>();
+  @Output() itemClick: EventEmitter<MouseEvent> = new EventEmitter<MouseEvent>();
 
   onClick(event: MouseEvent) {
     this.click = !this.click;
