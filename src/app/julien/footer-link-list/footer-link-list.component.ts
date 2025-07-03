@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit} from '@angular/core';
 
 interface Link {
   label: string;
@@ -16,14 +16,25 @@ interface LinkList {
   templateUrl: './footer-link-list.component.html',
   styleUrl: './footer-link-list.component.css'
 })
-export class FooterLinkListComponent {
+export class FooterLinkListComponent implements OnInit{
   @Input() linkList: LinkList = {
     heading: '',
     links: [],
   }
 
+  _stateLinks: any[] = []
+
   get stateLinks(): any[] {
-    return [...this.linkList.links].map(o => ({...o, hover: false}))
+    return this._stateLinks;
   }
+
+  set stateLinks(links: any[]){
+    this._stateLinks = links
+  }
+
+  ngOnInit(){
+    this.stateLinks = this.linkList.links.map( o => ({...o, hover: false}) )
+  }
+
 }
 
