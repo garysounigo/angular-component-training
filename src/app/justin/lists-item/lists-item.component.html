@@ -1,0 +1,42 @@
+<div class="lists" 
+    [style.fontSize.px]="size" 
+    [style.padding.px]="size*16/24"
+    [style.backgroundColor]="hover ? color : backgroundColor"
+    [style.color]="hover ? backgroundColor : color"
+    (mouseenter)="hover = true"
+    (mouseleave)="hover = false"
+    (click)="click = !click"
+    (click)="onClick()"
+>
+
+
+
+    @if (imgSrc) { <img class="lists-img" [src]="imgSrc" alt="X">
+}
+    <div class="title">
+        @if (title) {
+            <h1>{{ title | titlecase }}</h1>
+        } @else {
+            <ng-content select="h1[title]"></ng-content>
+
+        }
+        @if (subtitle) {
+            <p [style.fontSize.px]="size*8/9">{{ subtitle | titlecase }}</p>
+        } @else {
+            <ng-content select="p[subtitle]" [style.fontSize.px]="size*8/9"></ng-content>
+        }
+    </div>
+
+    @if (count) {
+        <div>
+            <p>{{ count }} + </p>
+        </div>
+    } @else {
+        <div>
+            <ng-content select="p[count]"></ng-content></div>
+    }
+</div>
+
+@if (click) {
+    <ng-content select="lists"></ng-content>
+}

@@ -1,0 +1,62 @@
+:host {
+    width: 100%;
+    display: block;
+    position: relative;
+}
+
+
+/* Les couleursse change dans le lists.component.ts */
+
+.lists {
+    width: auto;
+    padding: 16px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    flex: 1;
+}
+
+.lists:hover {
+    background-color: black;
+    color: #f3f3f3;
+}
+
+.lists-img {
+    width: 16px;
+    height: 30px;
+    margin-right: 20px;
+    padding: 16px;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-right: 20px;
+    text-align: left;
+    font-family: 'Arial', sans-serif;
+}
+
+p {
+    font-weight: 400;
+}
+
+.drop {
+    position: absolute;
+    left: 200px;
+}
+
+
+
+
+/* .lists-container{
+    display: flex;
+    align-items: center;
+    background: #f3f3f3;
+    background-color: #f3f3f3;
+    padding: 20px;
+    flex-direction: column;
+    color: black;
+    transition: background-color 0.2s ease;
+} */

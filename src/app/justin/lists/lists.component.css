@@ -1,0 +1,10 @@
+:host {
+    width: 100%;
+    display: block;
+    /* position: relative; */
+}
+
+.lists-title {
+    background: #d3d3d3;
+    font-weight: bold;
+}

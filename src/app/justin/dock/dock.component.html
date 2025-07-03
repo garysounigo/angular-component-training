@@ -1,0 +1,115 @@
+<div
+    class="dock-container"
+>
+    <lists [title]="lists.title || undefined" [drop]="lists.drop || undefined">
+        @for (item of lists.listsItems; track item; let i = $index) {
+            <lists-item 
+                (itemClick)="triggeredDrop(i)"
+                [click]="item.triggered"
+                [size]="item.size || undefined"
+            >
+                @if (item.title) {
+                    <h1 title>{{item.title}}</h1>
+                }
+                @if (item.subtitle) {
+                    <p subtitle>{{item.subtitle}}</p>
+                }
+                @if (item.lists) {
+                    <lists [title]="item.lists.title || undefined" [drop]="item.lists.drop || undefined">
+                        @for (item2 of item.lists.listsItems; track item2) {
+                            <lists-item [size]="item2.size || undefined">
+                                @if (item2.title) {
+                                    <h1 title>{{item2.title}}</h1>
+                                }
+                                @if (item2.subtitle) {
+                                    <p subtitle>{{item2.subtitle}}</p>
+                                }
+                            </lists-item>
+                        }
+                    </lists>
+                }
+            </lists-item>
+        }
+    </lists>
+
+    <!-- <lists >
+        <lists-item 
+            (itemClick)="triggeredDrop(0)"
+            [click]="lists.listsItems[0].triggered">
+
+            <h1 title>Dashboard</h1>
+            <lists [title]="'hello'" [drop]="true">
+                <lists-item [size]="16">
+                    <h1 title> First element</h1>
+                    <p subtitle>First supporting text</p>
+                </lists-item>
+                <lists-item [size]="16">
+                    <h1 title> First element</h1>
+                    <p subtitle>First supporting text</p>
+                </lists-item>
+            </lists>
+        </lists-item>
+
+        <lists-item (itemClick)="triggeredDrop(1)"
+            [click]="lists.listsItems[1].triggered">
+
+            <h1 title>Inbox</h1>
+            <lists [title]="'hello'" [drop]="true">
+                <lists-item [size]="16">
+                    <h1 title> First element</h1>
+                    <p subtitle>First supporting text</p>
+                </lists-item>
+                <lists-item [size]="16">
+                    <h1 title>Coucou</h1>
+                    <p subtitle>main</p>
+                </lists-item>
+            </lists>
+        </lists-item>
+
+        <lists-item (itemClick)="triggeredDrop(2)"
+            [click]="lists.listsItems[2].triggered">
+
+            <h1 title>Calendar</h1>
+            <lists [title]="'hello'" [drop]="true">
+                <lists-item [size]="16">
+                    <h1 title> Maman</h1>
+                    <p subtitle>comment vas tu</p>
+                </lists-item>
+                <lists-item [size]="16">
+                    <h1 title>Gateau</h1>
+                    <p subtitle>Délicieux</p>
+                </lists-item>
+            </lists>
+        </lists-item>
+
+        <lists-item (itemClick)="triggeredDrop(3)"
+            [click]="lists.listsItems[3].triggered">
+            <h1 title>Settings</h1>
+            <lists [title]="'hello'" [drop]="true">
+                <lists-item [size]="16">
+                    <h1 title>Paramétre</h1>
+                    <p subtitle>besoins d'aide</p>
+                </lists-item>
+                <lists-item [size]="16">
+                    <h1 title>vocal</h1>
+                    <p subtitle>belle vois</p>
+                </lists-item>
+            </lists>
+        </lists-item>
+
+        <lists-item (itemClick)="triggeredDrop(4)"
+            [click]="lists.listsItems[4].triggered">
+            <h1 title>Vaadin website</h1>
+            <lists [title]="'hello'" [drop]="true">
+                <lists-item>
+                    <h1 title>Site</h1>
+                    <p subtitle>Trop beau</p>
+                </lists-item>
+                <lists-item [size]="16">
+                    <h1 title>Contact</h1>
+                    <p subtitle>besoin d'un coup de main</p>
+                </lists-item>
+            </lists>
+        </lists-item>
+    </lists> -->
+</div>

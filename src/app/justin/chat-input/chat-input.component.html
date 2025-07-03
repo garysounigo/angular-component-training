@@ -1,0 +1,19 @@
+container height {{ch}}
+textarea height {{th}}
+container scroll {{csc}}
+textarea scroll {{tsc}}
+text style height {{tsh}}
+
+<div class="interface-container">
+    <div #container class="textarea-container">
+        <textarea
+            #textArea
+            class="textarea-scroll"
+            [rows]="rows"
+            placeholder="Posez une question"
+            (input)="resize(textArea, container)"
+            (focus)="resize(textArea, container)"
+        ></textarea>
+        <!-- <chips label="Options" iconrt="tune"></chips> -->
+    </div>
+</div>

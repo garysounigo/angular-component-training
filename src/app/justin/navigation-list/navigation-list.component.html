@@ -1,0 +1,38 @@
+<nav class="navigation-list">
+    <a
+        [class.highlight]="activeLink === '#products'"
+        (click)="setActive('#products')"
+    >
+        Products
+    </a>
+    <a
+        [class.highlight]="activeLink === '#solutions'"
+        (click)="setActive('#solutions')"
+    >
+        Solutions
+    </a>
+    <a
+        [class.highlight]="activeLink === '#community'"
+        (click)="setActive('#community')"
+    >
+        Community
+    </a>
+    <a
+        [class.highlight]="activeLink === '#resource'"
+        (click)="setActive('#resource')"
+    >
+        Resources
+    </a>
+    <a
+        [class.highlight]="activeLink === '#pricing'"
+        (click)="setActive('#pricing')"
+    >
+        Pricing
+    </a>
+    <a
+        [class.highlight]="activeLink === '#contact'"
+        (click)="setActive('#contact')"
+    >
+        Contact
+    </a>
+</nav>

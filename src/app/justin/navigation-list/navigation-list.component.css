@@ -1,0 +1,37 @@
+:host {
+    display: flex;
+    font-family: 'Poppins';
+    padding: 8px 16px;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.navigation-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    /* padding: 8px 16px; */
+}
+
+.navigation-list a {
+    cursor: pointer;
+    user-select: none;
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    border-radius: 8px;
+    padding: 8px;
+    transition: background-color 100ms ease,  color 100ms ease;
+    
+}
+
+.navigation-list a:hover {
+    background-color: #f5f5f5;
+}
+
+.highlight { 
+    background-color: #e0e0e0;
+    color: black;
+    cursor: none;
+}
