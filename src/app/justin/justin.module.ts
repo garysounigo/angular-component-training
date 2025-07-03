@@ -20,6 +20,14 @@ import { NavigationListComponent } from './navigation-list/navigation-list.compo
     ListsItemComponent,
     NavigationListComponent,
   ],
+  exports: [
+    JustinComponent,
+    ChatInputComponent,
+    DockComponent,
+    ListsComponent,
+    ListsItemComponent,
+    NavigationListComponent,
+  ],
   imports: [
     CommonModule,
     JustinRoutingModule,

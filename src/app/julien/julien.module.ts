@@ -22,6 +22,15 @@ import { SocialMediaIconComponent } from './social-media-icon/social-media-icon.
     SocialMediaIconPanelComponent,
     SocialMediaIconComponent,
   ],
+  exports: [    
+    JulienComponent,
+    ChatMessageComponent,
+    ChipsComponent,
+    FooterLinkListComponent,
+    FooterFrameComponent,
+    SocialMediaIconPanelComponent,
+    SocialMediaIconComponent,
+  ],
   imports: [
     CommonModule,
     JulienRoutingModule,
