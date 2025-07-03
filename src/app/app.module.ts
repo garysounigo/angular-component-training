@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { JulienModule } from './julien/julien.module';
 import { JustinModule } from './justin/justin.module';
 import { SelectComponent } from './select/select.component';
+import { ChatContainerComponent } from './chat-container/chat-container.component';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { SelectComponent } from './select/select.component';
     AppComponent,
     HomeComponent,
     SelectComponent,
+    ChatContainerComponent,
   ],
   imports: [
     BrowserModule,

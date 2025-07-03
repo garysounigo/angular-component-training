@@ -1,0 +1,23 @@
+.chat-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+}
+
+.chat-shell {
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #f0f0f0;
+    height: 600px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.chat-shell::-webkit-scrollbar {
+    display: none;
+}

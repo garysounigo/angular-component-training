@@ -9,7 +9,7 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    width: 100%;
+    width: 671%;
     height: 48px;
     max-height: 280px;
     padding: 11px;
@@ -17,7 +17,7 @@
     color: #f6f6f6;
     background-color: #303030;
     border: 1px solid #2c2f36;
-    border-radius: 8px;
+    border-radius: 9px 0px 0px 9px;
     box-shadow: 0 4px 8px #ffffffc6;
     box-sizing: border-box;
     line-height: 24px;
