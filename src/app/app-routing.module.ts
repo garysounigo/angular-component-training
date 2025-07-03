@@ -9,8 +9,8 @@ const routes: Routes = [
     path: '',
     component: HomeComponent,
   },
-  { path: 'justin', loadChildren: () => import('./justin/justin.module').then(m => m.JustinModule) },
-  { path: 'julien', loadChildren: () => import('./julien/julien.module').then(m => m.JulienModule) },
+  //{ path: 'justin', loadChildren: () => import('./justin/justin.module').then(m => m.JustinModule) },
+  //{ path: 'julien', loadChildren: () => import('./julien/julien.module').then(m => m.JulienModule) },
 ];
 
 @NgModule({

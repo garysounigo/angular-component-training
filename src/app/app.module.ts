@@ -6,16 +6,23 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 
+import { JulienModule } from './julien/julien.module';
+import { JustinModule } from './justin/justin.module';
+import { SelectComponent } from './select/select.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
+    SelectComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    JulienModule,
+    JustinModule,
   ],
   providers: [
     provideClientHydration(withEventReplay())
