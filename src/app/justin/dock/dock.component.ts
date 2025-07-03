@@ -26,7 +26,7 @@ export class DockComponent {
     listsItems: [
       {
         triggered: false,
-        title: 'Dashboard',
+        title: 'Tableu intelligent',
         lists: {
           title: 'hello',
           drop: false,
@@ -46,7 +46,7 @@ export class DockComponent {
       },
       {
         triggered: false,
-        title: 'Inbox',
+        title: 'Flux collaboratif',
         lists: {
           title: 'hello',
           drop: false,
@@ -66,10 +66,10 @@ export class DockComponent {
       },
       {
         triggered: false,
-        title: 'Calendar',
+        title: 'Calenddrier projet',
         lists: {
           title: 'hello',
-          drop: true,
+          drop: false,
           listsItems: [
             {
               size: '16',
@@ -86,10 +86,10 @@ export class DockComponent {
       },
       {
       triggered: false,
-      title: 'Settings',
+      title: 'Paramétre IA',
       lists: {
         title: 'hello',
-        drop: true,
+        drop: false,
         listsItems: [
           {
             size: '16',
@@ -106,10 +106,10 @@ export class DockComponent {
       },
       {
         triggered: false,
-        title: 'Vaadin website',
+        title: 'A propos de la plateforme',
         lists: {
           title: 'hello',
-          drop: true,
+          drop: false,
           listsItems: [
             {
               size: '16',
