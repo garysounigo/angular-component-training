@@ -1,9 +1,7 @@
-.interface-container {
-    display: flex;
+:host {
+    display: inline-flex;
     flex-direction: column;
     justify-content: flex-end;
-    height: 500px;
-
 }
 
 .textarea-container {
