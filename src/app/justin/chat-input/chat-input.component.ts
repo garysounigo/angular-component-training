@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'chat-input',
@@ -7,29 +7,26 @@ import { Component } from '@angular/core';
   styleUrl: './chat-input.component.css'
 })
 export class ChatInputComponent {
-  th : number = 0;
-  ch : number = 0;
-  tsc : number = 0;
-  csc : number = 0;
-  tsh : number = 0;
+
+  @Output() value: EventEmitter<string> = new EventEmitter<string>();
+
+  valueTextarea: string = '';
   rows : number = 1;
-  resize(textarea: HTMLTextAreaElement, container: HTMLElement): void {
-    this.th = textarea.getBoundingClientRect().height; 
-    this.ch = container.getBoundingClientRect().height;
-    this.tsc = textarea.scrollHeight;
-    this.csc = container.scrollHeight;
 
-    if( textarea.scrollHeight > Number(textarea.style.height.replace('px', '')) ) {
-    // Set height to scrollHeight to expand as needed
-      // container.style.height = `${textarea.scrollHeight + 24}px`;
-      // textarea.style.height = `${textarea.scrollHeight + 24}px`;
-      this.rows ++;
-    this.th = textarea.getBoundingClientRect().height; 
-    this.ch = container.getBoundingClientRect().height;
-    this.tsc = textarea.scrollHeight;
-    this.csc = container.scrollHeight;
-    this.tsh = Number(textarea.style.height.replace('px', ''));
-
-    }
+  resizeOnNewLine(container: HTMLElement, textArea: HTMLTextAreaElement): void {
+    container.style.height = `${textArea.scrollHeight+24}px`;
   }
+
+  handleKeydown(event: KeyboardEvent): void{
+    if(event.key === 'Enter' && !event.shiftKey){
+      event.preventDefault()
+
+      //if not empty send value
+      this.valueTextarea && this.value.emit(this.valueTextarea);
+      //if send value, reset value;
+      this.valueTextarea && (this.valueTextarea = '');
+    }
+
+  }
+
 }

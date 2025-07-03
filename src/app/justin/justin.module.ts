@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 import { JustinRoutingModule } from './justin-routing.module';
 import { JustinComponent } from './justin.component';
@@ -30,6 +31,7 @@ import { NavigationListComponent } from './navigation-list/navigation-list.compo
   ],
   imports: [
     CommonModule,
+    FormsModule,
     JustinRoutingModule,
   ]
 })

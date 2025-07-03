@@ -3,10 +3,12 @@
     <textarea
         #textArea
         class="textarea-scroll"
-        [rows]="rows"
+        rows="1"
+        wrap="soft"
         placeholder="Posez une question"
-        (input)="resize(textArea, container)"
-        (focus)="resize(textArea, container)"
+        [(ngModel)]="valueTextarea"
+        (input)="resizeOnNewLine(container,textArea)"
+        (keydown)="handleKeydown($event)"
     ></textarea>
     <!-- <chips label="Options" iconrt="tune"></chips> -->
 </div>

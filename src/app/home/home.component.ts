@@ -111,4 +111,10 @@ export class HomeComponent {
       },
     ]
   };
+
+
+  onValue(event: string): void{
+    console.log("receive value",event)
+  }
+
 }

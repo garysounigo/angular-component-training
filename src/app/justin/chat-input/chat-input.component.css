@@ -49,6 +49,9 @@ textarea {
     /* hide scrollbar */
     scrollbar-width: none;
     -ms-overflow-style: none;
+    /*to create new line on overflow-x*/
+    white-space: pre-wrap;
+    word-break: break-word;
 }
 
     /* hide scrollbar */
