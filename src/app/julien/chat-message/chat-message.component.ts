@@ -46,7 +46,6 @@ export class ChatMessageComponent {
   @Input() receiver: string = '';
   @Input() generator: GeneratorType = '';
 
-  @Input()
 
   meta: MessageMeta = {
     send: this.send,

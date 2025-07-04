@@ -17,10 +17,13 @@ export class ChipsComponent {
   @Input("radius") radius: number = 16;
   hover: boolean = false;
 
+  @Input() selected: boolean = false;
+
   @Output() value: EventEmitter<string> = new EventEmitter<string>();
 
-  onValue(): void{
-    this.value.emit(this.label);
+  onSelect(): void{
+    this.selected = !this.selected;
+    this.selected && this.value.emit(this.label);
   }
 
   calculatePadding(): string {

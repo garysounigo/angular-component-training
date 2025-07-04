@@ -5,7 +5,6 @@ import { FormsModule } from '@angular/forms';
 import { JustinRoutingModule } from './justin-routing.module';
 import { JustinComponent } from './justin.component';
 
-import { ChatInputComponent } from './chat-input/chat-input.component';
 import { DockComponent } from './dock/dock.component';
 import { ListsComponent  } from './lists/lists.component';
 import { ListsItemComponent } from './lists-item/lists-item.component';
@@ -15,7 +14,6 @@ import { NavigationListComponent } from './navigation-list/navigation-list.compo
 @NgModule({
   declarations: [
     JustinComponent,
-    ChatInputComponent,
     DockComponent,
     ListsComponent,
     ListsItemComponent,
@@ -23,7 +21,6 @@ import { NavigationListComponent } from './navigation-list/navigation-list.compo
   ],
   exports: [
     JustinComponent,
-    ChatInputComponent,
     DockComponent,
     ListsComponent,
     ListsItemComponent,

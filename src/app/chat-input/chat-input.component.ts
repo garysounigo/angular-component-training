@@ -32,4 +32,18 @@ export class ChatInputComponent {
 
   }
 
+  sendB: string = 'true';
+
+  @Output() send: EventEmitter<string> = new EventEmitter<string>();
+
+  onLabelValue(event: string): void{
+    if(event==='send'){
+      this.sendB = 'true';
+    }
+    else if(event=='receive'){
+      this.sendB = 'false'
+    }
+    this.send.emit(this.sendB);
+  }
+
 }

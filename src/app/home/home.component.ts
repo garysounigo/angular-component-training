@@ -140,6 +140,7 @@ export class HomeComponent {
 
 
   conversation: ChatMessage[] = [];
+  send: string = 'true';
 
 
   onValue(event: string): void{
@@ -151,7 +152,7 @@ export class HomeComponent {
         content: event, 
       },
       meta: {
-        send: "true",
+        send: this.send,
         receive: "false",
         sender: "user",
         receiver: "assistant",
@@ -160,6 +161,10 @@ export class HomeComponent {
     }
     this.conversation = [...this.conversation, newMessage];
     //this.conversation.push();
+  }
+
+  onLabelValue(event: string): void{
+    this.send = event;
   }
 
 }

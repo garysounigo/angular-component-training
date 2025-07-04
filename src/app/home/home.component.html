@@ -6,7 +6,7 @@
 	</div>
 	<div class="flex-column column2">
 		<chat-container [conversation]="conversation"></chat-container>
-		<chat-input (value)="onValue($event)"></chat-input>
+		<chat-input (value)="onValue($event)" (send)="onLabelValue($event)"></chat-input>
 	</div>
 </div>
 <footer-frame></footer-frame>

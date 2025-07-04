@@ -9,5 +9,8 @@
         (input)="resizeOnNewLine(container,textArea)"
         (keydown)="handleKeydown($event)"
     ></textarea>
-    <!-- <chips label="Options" iconrt="tune"></chips> -->
+</div>
+<div>
+    <chips label="send" [selected]="sendB==='true'" (value)="onLabelValue($event)"></chips> 
+    <chips label="receive" [selected]="sendB==='true'? false : true" (value)="onLabelValue($event)"></chips>
 </div>
