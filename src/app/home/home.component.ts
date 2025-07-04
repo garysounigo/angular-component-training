@@ -25,6 +25,16 @@ interface ChatMessage {
   meta: MessageMeta;
 }
 
+interface Link {
+  label: string;
+  href: string;
+}
+
+interface LinkList {
+  heading: string;
+  links: Link[];
+}
+
 
 @Component({
   selector: 'app-home',
@@ -167,4 +177,74 @@ export class HomeComponent {
     this.send = event;
   }
 
+
+
+  linkLists: LinkList[] = [
+    {
+      heading: 'Projet IA',
+      links: [
+        {
+          label: 'UI Conception',
+          href: '/julien',
+        },
+        {
+          label: 'UX Conception',
+          href: '/justin',
+        },
+        {
+          label: 'Wireframing Structure',
+          href: '/julien',
+        },
+        {
+          label: 'Diagramming Représentation',
+          href: '/julien',
+        },
+        {
+          label: 'Brainstorming Idéation',
+          href: '/justin',
+        },
+        {
+          label: 'Online whiteboard',
+          href: '/julien',
+        },
+        {
+          label: 'Online Tableau',
+          href: '/justin',
+        },
+      ]
+    },
+    {
+      heading: 'Explore',
+      links: [
+        {
+          label: 'design Conception',
+          href: '',
+        },
+        {
+          label: 'prototyping Maquettage ',
+          href: '',
+        },
+        {
+          label: 'développement Évolution',
+          href: '',
+        },
+        {
+          label: 'features Fonctionnalités ',
+          href: '',
+        },
+        {
+          label: 'design Systèmes',
+          href: '',
+        },
+        {
+          label: 'collaboration Fonctionnalités',
+          href: '',
+        },
+        // {
+        //   label: 'figjam Outil',
+        //   href: '',
+        // },
+      ]
+    },
+  ];
 }
