@@ -143,22 +143,23 @@ export class HomeComponent {
 
 
   onValue(event: string): void{
-
-    this.conversation.push({
-        mode: "conversation",
-        type: "message",
-        message: {
-          role: "user",
-          content: event, 
-        },
-        meta: {
-          send: "true",
-          receive: "false",
-          sender: "user",
-          receiver: "assistant",
-          generator: "openai"
-        }
-      });
+    let newMessage: ChatMessage = {
+      mode: "conversation",
+      type: "message",
+      message: {
+        role: "user",
+        content: event, 
+      },
+      meta: {
+        send: "true",
+        receive: "false",
+        sender: "user",
+        receiver: "assistant",
+        generator: "openai"
+      }
+    }
+    this.conversation = [...this.conversation, newMessage];
+    //this.conversation.push();
   }
 
 }

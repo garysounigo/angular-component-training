@@ -1,5 +1,5 @@
 <div class="chat-container">
-    <div class="chat-shell">
+    <div #shell class="chat-shell">
         @for (chatMessage of conversation; track chatMessage) {
             <chat-message [content]="chatMessage.message.content" [send]="chatMessage.meta.send" [receive]="chatMessage.meta.receive" [mode]="chatMessage.mode" [type]="chatMessage.type" [role]="chatMessage.message.role"></chat-message>
         }
