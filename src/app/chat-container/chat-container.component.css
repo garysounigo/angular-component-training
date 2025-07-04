@@ -11,7 +11,7 @@
     background-color: black;
     display:flex;
     flex-direction: column;
-    width: 100%;
+    width: 1632px;
     height: 600px;
     overflow-y: scroll;
     overflow-x: hidden;
