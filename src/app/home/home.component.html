@@ -1,7 +1,10 @@
+
 <navigation-list></navigation-list>
 <div class="flex-row">
-	<dock [lists]="lists"></dock>
-	<div class="flex-column">
+	<div class="flex-column column1">
+		<dock [lists]="lists"></dock>
+	</div>
+	<div class="flex-column column2">
 		<chat-container [conversation]="conversation"></chat-container>
 		<chat-input (value)="onValue($event)"></chat-input>
 	</div>

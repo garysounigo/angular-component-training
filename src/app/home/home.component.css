@@ -2,6 +2,33 @@
 	display: inline-flex;
 	flex-direction: row;
 	justify-content: flex-start;
-	align-items: flex-start;
-	margin-bottom: 80px;
+	align-items: stretch;;
+	/* margin-bottom: 80px; */
+	width: 100%;
+	height: 100%;
+}
+
+.flex-column {
+	display: flex;
+	flex-direction: column;
+
+}
+
+.column1 {
+    /* Si vous voulez que la dock ait une largeur fixe, par exemple */
+    flex-shrink: 0; /* Empêche le rétrécissement si l'espace est limité */
+}
+
+/* Pour la deuxième colonne (qui contient le chat) */
+.column2 {
+    flex-grow: 1; /* C'est la clé pour que cette colonne prenne tout l'espace restant */
+    width: 100%; /* Assure qu'elle prend sa part de l'espace restant */
+}
+
+chat-container {
+    flex-grow: 1; /* Le conteneur de chat prend tout l'espace vertical restant */
+}
+
+chat-input {
+    flex-shrink: 0; /* L'input de chat ne se réduit pas */
 }

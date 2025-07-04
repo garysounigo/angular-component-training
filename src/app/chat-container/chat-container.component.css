@@ -1,3 +1,8 @@
+:host {
+    display: flex; /* Si chat-container a des éléments internes qui doivent s'étirer */
+    flex-direction: column; /* Si chat-container a des éléments internes qui doivent s'étirer */
+}
+
 .chat-container {
     display: flex;
     flex-direction: row;
@@ -11,7 +16,7 @@
     background-color: black;
     display:flex;
     flex-direction: column;
-    width: 1632px;
+    width: 100%;
     height: 600px;
     overflow-y: scroll;
     overflow-x: hidden;
