@@ -18,11 +18,7 @@ export class ChatInputComponent {
     //textArea.style.height = 'auto';
     //textArea.style.height = `${textArea.scrollHeight}px`;
     container.style.height = `${textArea.scrollHeight+24}px`;
-
-    
-  onValue(value: any){
-    this.value.emit(value);
-  }
+  }  
 
   handleKeydown(event: KeyboardEvent): void{
     if(event.key === 'Enter' && !event.shiftKey){
