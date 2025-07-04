@@ -35,7 +35,7 @@
 .type-block {
     font-family: "arial", sans-serif;
     width: 100%;
-    background-color: #f0f0f0;
+    background-color: black;
     padding: 50px 250px;
     overflow-wrap: break-word;
     word-break: break-word;
@@ -44,4 +44,5 @@
     letter-spacing: normal; 
     margin-block-end: 16px;
     border-radius: 16px;
+    color: white;
 }

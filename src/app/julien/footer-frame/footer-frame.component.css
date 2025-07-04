@@ -3,4 +3,6 @@
     flex-direction: row;
     align-items: flex-start;
     gap: 100px;
+    justify-content: center;
+    border: 1px black;
 }
