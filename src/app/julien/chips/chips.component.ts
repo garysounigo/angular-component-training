@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'chips',
@@ -16,6 +16,12 @@ export class ChipsComponent {
   @Input("bckColor") bckColor: string = "#f3f3f3";
   @Input("radius") radius: number = 16;
   hover: boolean = false;
+
+  @Output() value: EventEmitter<string> = new EventEmitter<string>();
+
+  onValue(): void{
+    this.value.emit(this.label);
+  }
 
   calculatePadding(): string {
     return `${this.padding*6/15}px`;
