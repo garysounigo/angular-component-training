@@ -2,10 +2,8 @@
 <div class="flex-row">
 	<dock [lists]="lists"></dock>
 	<div class="flex-column">
-		<chat-message></chat-message>
+		<chat-container [conversation]="conversation"></chat-container>
 		<chat-input (value)="onValue($event)"></chat-input>
-		<chat-container></chat-container>
 	</div>
 </div>
-<chips></chips>
 <footer-frame></footer-frame>

@@ -14,6 +14,8 @@ export class ChatInputComponent {
   rows : number = 1;
 
   resizeOnNewLine(container: HTMLElement, textArea: HTMLTextAreaElement): void {
+    //textArea.style.height = 'auto';
+    //textArea.style.height = `${textArea.scrollHeight}px`;
     container.style.height = `${textArea.scrollHeight+24}px`;
   }
 

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 type RoleType = 'user' | 'assistant' | 'system' | '';
 type TypeType = 'message' | 'code' | 'block' | 'image' | 'file' | 'video' | 'audio' | 'blockcode' | '';
@@ -34,7 +34,7 @@ interface ChatMessage {
 })
 export class ChatContainerComponent {
 
-  conversation: ChatMessage[] = [
+  @Input() conversation: ChatMessage[] = [
       {
         mode: "conversation",
         type: "message",

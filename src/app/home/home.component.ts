@@ -1,5 +1,31 @@
 import { Component } from '@angular/core';
 
+type RoleType = 'user' | 'assistant' | 'system' | '';
+type TypeType = 'message' | 'code' | 'block' | 'image' | 'file' | 'video' | 'audio' | 'blockcode' | '';
+type ModeType = 'conversation' | 'chatbot' | '';
+type GeneratorType = 'openai' | 'anthropic' | 'google' | 'microsoft' | 'cohere' | 'other' | '';
+
+interface Message {
+  role: RoleType;
+  content: string;
+}
+
+interface MessageMeta {
+  send: string;
+  receive: string;
+  sender: string;
+  receiver: string;
+  generator: GeneratorType;
+}
+
+interface ChatMessage {
+  mode: ModeType;
+  type: TypeType;
+  message: Message;
+  meta: MessageMeta;
+}
+
+
 @Component({
   selector: 'app-home',
   standalone: false,
@@ -113,8 +139,26 @@ export class HomeComponent {
   };
 
 
+  conversation: ChatMessage[] = [];
+
+
   onValue(event: string): void{
-    console.log("receive value",event)
+
+    this.conversation.push({
+        mode: "conversation",
+        type: "message",
+        message: {
+          role: "user",
+          content: event, 
+        },
+        meta: {
+          send: "true",
+          receive: "false",
+          sender: "user",
+          receiver: "assistant",
+          generator: "openai"
+        }
+      });
   }
 
 }
