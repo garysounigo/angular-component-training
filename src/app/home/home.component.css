@@ -32,3 +32,7 @@ chat-container {
 chat-input {
     flex-shrink: 0; /* L'input de chat ne se réduit pas */
 }
+
+dock {
+	flex-grow: 1;
+}
