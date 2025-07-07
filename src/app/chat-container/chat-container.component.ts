@@ -1,4 +1,7 @@
 import { Component, Input, ViewChild, ElementRef, AfterViewChecked , OnChanges, SimpleChanges} from '@angular/core';
+// import { Observable, of} from 'rxjs';
+// import { tap, delay } from 'rxjs/operators';
+
 
 type RoleType = 'user' | 'assistant' | 'system' | '';
 type TypeType = 'message' | 'code' | 'block' | 'image' | 'file' | 'video' | 'audio' | 'blockcode' | '';
@@ -33,8 +36,19 @@ interface ChatMessage {
   styleUrl: './chat-container.component.css'
 })
 export class ChatContainerComponent implements OnChanges, AfterViewChecked {
- 
-  private _conversation: ChatMessage[] = []
+
+  // private _conversation: Observable<ChatMessage[]> = of([]);
+  
+  // @Input() 
+  // set conversation(c:Observable<ChatMessage[]>){
+  //   this._conversation = c;
+  // }
+
+  // get conversation(): Observable<ChatMessage[]> {
+  //   return this._conversation;
+  // };
+
+    private _conversation: ChatMessage[] = [];
   
   @Input() 
   set conversation(c:ChatMessage[]){
@@ -62,14 +76,21 @@ export class ChatContainerComponent implements OnChanges, AfterViewChecked {
     }
   }
 
-
   scrollToBottom(el: HTMLElement): void{
-    console.log('clientHeight:', el.clientHeight, 'scrollHeight:', el.scrollHeight);
     setTimeout(() => {
-      el.scrollTop = el.scrollHeight;
+      el.scrollTo({
+        top: el.scrollHeight,
+        behavior: 'smooth'
+      });
     });
   }
 
+  // constructor(){
+  //   this.conversation.pipe(
+  //     delay(10000),
+  //     tap(() => {this.scrollToBottom(this.shell.nativeElement)})
+  //   );
+  }
 
   // [
   //   {
@@ -118,4 +139,3 @@ export class ChatContainerComponent implements OnChanges, AfterViewChecked {
   //     meta: { send: "false", receive: "true", sender: "assistant", receiver: "user", generator: "openai" }
   //   },
   // ];
-}

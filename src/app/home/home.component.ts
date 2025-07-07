@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 
 type RoleType = 'user' | 'assistant' | 'system' | '';
 type TypeType = 'message' | 'code' | 'block' | 'image' | 'file' | 'video' | 'audio' | 'blockcode' | '';
@@ -47,100 +48,95 @@ export class HomeComponent {
     listsItems: [
       {
         triggered: false,
-        title: 'Tableu intelligent',
+        title: 'Comment créer un bot IA',
         lists: {
-          title: 'hello',
           drop: true,
           listsItems: [
             {
               size: '16',
-              title: 'First element',
-              subtitle: 'First supporting text'
+              title: 'Renommer',
+              subtitle: 'modifier le titre'
             },
             {
               size: '16',
-              title: 'First element',
-              subtitle: 'First supporting text'
+              title: 'Supprimer',
+              subtitle: 'supprimer votre conversation'
             },
           ]
         },
       },
       {
         triggered: false,
-        title: 'Flux collaboratif',
+        title: 'Faire une tarte',
         lists: {
-          title: 'hello',
           drop: true,
           listsItems: [
             {
               size: '16',
-              title: 'First element',
-              subtitle: 'First supporting text',
+              title: 'Renommer',
+              subtitle: 'modifier le titre',
             },
             {
               size: '16',
-              title: 'Coucou',
-              subtitle: 'main',
+              title: 'Supprimer',
+              subtitle: 'supprimer votre conversation',
             },
           ]
         }
       },
       {
         triggered: false,
-        title: 'Calenddrier projet',
+        title: 'Créer un jeux en C#',
         lists: {
-          title: 'hello',
           drop: true,
           listsItems: [
             {
               size: '16',
-              title: 'First element',
-              subtitle: 'First supporting text',
+              title: 'Renommer',
+              subtitle: 'modifier le titre',
             },
             {
               size: '16',
-              title: 'Coucou',
-              subtitle: 'main',
+              title: 'Supprimer',
+              subtitle: 'supprimer votre conversation',
             }
           ]
         }
       },
       {
       triggered: false,
-      title: 'Paramétre IA',
+      title: 'Ligne de commande de git',
       lists: {
-        title: 'hello',
         drop: true,
         listsItems: [
           {
             size: '16',
-            title: 'First element',
-            subtitle: 'First supporting text',
+            title: 'Renommer',
+            subtitle: 'modifier le titre',
           },
           {
             size: '16',
-            tilte: 'Coucou',
-            subtitle: 'main',
+            title: 'Supprimer',
+            subtitle: 'supprimer votre conversation',
             },
           ]
         }
       },
       {
         triggered: false,
-        title: 'A propos de la plateforme',
+        title: 'Comment faire une bases de donnée',
         lists: {
-          title: 'hello',
           drop: true,
           listsItems: [
             {
               size: '16',
-              title: 'First element',
-              subtitle: 'First supporting text',
+              title: 'Renommer',
+              subtitle: 'modifier le titre',
             },
             {
               size: '16',
-              title: 'Coucou',
-              subtitle: 'main',
+              title: 'Supprimer',
+              subtitle: 'supprimer votre conversation',
             },
           ]
         }
@@ -149,7 +145,115 @@ export class HomeComponent {
   };
 
 
-  conversation: ChatMessage[] = [];
+  // conversation: BehaviorSubject<ChatMessage[]> = new BehaviorSubject<ChatMessage[]>([]);
+  conversation: ChatMessage[] = [
+    {
+      mode: "conversation",
+      type: "message",
+      message: {
+        role: "user",
+        content: 'Comment peut-on créer un bot basé sur l’intelligence artificielle ?',
+      },
+      meta: {
+        send: 'true',
+        receive: "false",
+        sender: "user",
+        receiver: "assistant",
+        generator: "openai"
+      }
+    },
+    {
+      mode: "conversation",
+      type: "message",
+      message: {
+        role: "user",
+        content: 'Créer un bot IA commence par définir clairement son objectif : répondre à des questions, automatiser des tâches, ou interagir avec des utilisateurs. Ensuite, il faut choisir une technologie adaptée comme les modèles de langage (ex. : GPT, Rasa, Dialogflow). On entraîne ensuite le bot avec des données pertinentes (textes, scénarios, intentions), on le connecte à une interface (site web, app, messagerie), et enfin, on le teste et améliore continuellement en fonction des retours utilisateurs.',
+      },
+      meta: {
+        send: 'false',
+        receive: "false",
+        sender: "user",
+        receiver: "assistant",
+        generator: "openai"
+      }
+    },
+    {
+      mode: "conversation",
+      type: "message",
+      message: {
+        role: "user",
+        content: 'Un bot simple suit des règles prédéfinies, comme des réponses fixes à des mots-clés. Un bot IA, lui, comprend le langage naturel, apprend à partir des interactions, et peut adapter ses réponses selon le contexte grâce à des modèles d’apprentissage automatique.',
+      },
+      meta: {
+        send: 'false',
+        receive: "false",
+        sender: "user",
+        receiver: "assistant",
+        generator: "openai"
+      }
+    },
+    {
+      mode: "conversation",
+      type: "message",
+      message: {
+        role: "user",
+        content: 'Faut-il savoir programmer pour créer un bot IA ?',
+      },
+      meta: {
+        send: 'true',
+        receive: "false",
+        sender: "user",
+        receiver: "assistant",
+        generator: "openai"
+      }
+    },
+    {
+      mode: "conversation",
+      type: "message",
+      message: {
+        role: "user",
+        content: 'Pas forcément. Il existe des plateformes sans code comme Chatfuel, Landbot ou Dialogflow qui permettent de créer un bot IA de base. Cependant, pour un bot plus avancé ou personnalisé, des connaissances en Python, en NLP (traitement du langage naturel) et en API sont très utiles.',
+      },
+      meta: {
+        send: 'false',
+        receive: "false",
+        sender: "user",
+        receiver: "assistant",
+        generator: "openai"
+      }
+    },
+    {
+      mode: "conversation",
+      type: "message",
+      message: {
+        role: "user",
+        content: 'Quelles données sont nécessaires pour entraîner un bot IA ?',
+      },
+      meta: {
+        send: 'true',
+        receive: "false",
+        sender: "user",
+        receiver: "assistant",
+        generator: "openai"
+      }
+    },
+    {
+      mode: "conversation",
+      type: "message",
+      message: {
+        role: "user",
+        content: 'Un bot IA a besoin de données textuelles comme des exemples de questions/réponses, des dialogues réels, ou des intentions utilisateurs. Plus les données sont variées et bien structurées, plus le bot pourra comprendre et répondre avec pertinence.',
+      },
+      meta: {
+        send: 'false',
+        receive: "false",
+        sender: "user",
+        receiver: "assistant",
+        generator: "openai"
+      }
+    },
+  ]
+  
   send: string = 'true';
 
 
@@ -171,6 +275,10 @@ export class HomeComponent {
     }
     this.conversation = [...this.conversation, newMessage];
     //this.conversation.push();
+
+    // this.c.push(newMessage);
+    // this.conversation.next(this.c)
+
   }
 
   onLabelValue(event: string): void{
@@ -217,27 +325,27 @@ export class HomeComponent {
       heading: 'Explore',
       links: [
         {
-          label: 'design Conception',
+          label: 'Design Conception',
           href: '',
         },
         {
-          label: 'prototyping Maquettage ',
+          label: 'Prototyping Maquettage ',
           href: '',
         },
         {
-          label: 'développement Évolution',
+          label: 'Développement Évolution',
           href: '',
         },
         {
-          label: 'features Fonctionnalités ',
+          label: 'Features Fonctionnalités ',
           href: '',
         },
         {
-          label: 'design Systèmes',
+          label: 'Design Systèmes',
           href: '',
         },
         {
-          label: 'collaboration Fonctionnalités',
+          label: 'Collaboration Fonctionnalités',
           href: '',
         },
         // {
